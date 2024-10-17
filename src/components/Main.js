@@ -51,8 +51,7 @@ const Main = () => {
             <div
               key={index}
               className={`${index === activeIndex ? 'active' : index < activeIndex ? 'hidden' : ''}`}
-              style={{ '--background': item.background }}
-            >
+              style={{ '--background': item.background }}>
               <div className="content">{item.content}</div>
               <img src={item.img} className="fruit" alt={item.content} />
             </div>

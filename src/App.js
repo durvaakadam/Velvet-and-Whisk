@@ -1,29 +1,27 @@
 import './App.css';
 import Layout from './components/layout';
-import Home from './pages/home';
-// import About from './components/About';
 import Detail from './pages/detail';
-import CartTab from './components/cartTab'; // Import CartTab
-import Checkout from './components/checkout'; // Import Checkout
-import Razorpay from './components/razorpay'; // Import Razorpay component
+import CartTab from './components/cartTab';
+import Checkout from './components/checkout';
+import Razorpay from './components/razorpay';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
-
+import Home from './pages/home';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Layout Route wraps multiple routes */}
-        {/* <Route path='/' element={<Layout />}>
-       
-           <Route index element={<Home />} /> */}
-          <Route path='/' element={<Main />} />
-          <Route path='/:slug' element={<Detail />} />
-          {/* <Route path='about' element={<About/>} /> */}
-          <Route path='/cart' element={<CartTab />} /> 
-          <Route path='/checkout' element={<Checkout />} /> 
-          <Route path='/razorpay' element={<Razorpay />} /> 
+        {/* Main component as the initial landing page */}
+        <Route path='/' element={<Main />} />
         
+        {/* Layout wraps the rest of the application */}
+        <Route path='/' element={<Layout />}>
+          <Route path='/home' element={<Home />} /> {/* Ensure you have Home imported */}
+          <Route path='/:slug' element={<Detail />} />
+          <Route path='/cart' element={<CartTab />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/razorpay' element={<Razorpay />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

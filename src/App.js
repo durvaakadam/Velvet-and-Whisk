@@ -14,16 +14,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Layout Route wraps multiple routes */}
-        <Route path='/' element={<Layout />}>
+        {/* <Route path='/' element={<Layout />}>
        
-           <Route index element={<Home />} />
-          <Route path='/main' element={<Main />} />
+           <Route index element={<Home />} /> */}
+          <Route path='/' element={<Main />} />
           <Route path='/:slug' element={<Detail />} />
           {/* <Route path='about' element={<About/>} /> */}
           <Route path='/cart' element={<CartTab />} /> 
           <Route path='/checkout' element={<Checkout />} /> 
           <Route path='/razorpay' element={<Razorpay />} /> 
-        </Route>
+        
       </Routes>
     </BrowserRouter>
   );

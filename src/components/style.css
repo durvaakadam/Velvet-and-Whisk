@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: lightgray;
     
 }
 header{
@@ -29,7 +30,7 @@ header ul{
 
 .carousel{
     width: 100vw;
-    height: 100vh;
+    height: 101.4vh;
     position: relative;
     overflow: hidden;
     margin-top: -50px;
@@ -40,7 +41,17 @@ header ul{
     height: 100%;
 }
 
-.item{
+.list div {
+    background-color: var(--background); /* Use the variable here */
+    transition: background-color 0.5s;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+
+
+  .item {
     width: 100%;
     height: 100%;
     background-color: var(--background);
@@ -49,29 +60,34 @@ header ul{
     left: 0;
     overflow: hidden;
     display: none;
+    z-index: 5; /* Ensure items stay below the can */
 }
-.item img.fruit{
+.item img.fruit {
     width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 15;
-    pointer-events: none;
+    z-index: 5; /* Lower than content */
 }
-.item .content{
+
+.item .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 12rem;
+    font-size: 10rem; /* Adjusted to avoid overflow */
     color: #eee;
     font-weight: bold;
     font-family: system-ui;
     text-transform: uppercase;
     white-space: nowrap;
+    z-index: 5; /* Behind the can */
+    opacity: 1; /* Ensure it's visible */
+    transition: color 0.5s, opacity 0.5s;
 }
+
 .item.active{
     display: block;
 }

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Ensure React Router is installed
 import './style.css';
 
 const Main = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
-    { background: '#ffffff', content: 'ALMOND ', img: '/img/almond_bg.png' },
-    { background: '#ff94b0', content: 'ROSE MILK', img: '/img/rose_bg.png' },
-    { background: '#c7c455', content: 'PISTA MILK', img: '/img/pista_bg.png' }
+    { background: '#ee915c', content: ' ', img: '/img/almond_bg.png' },
+    { background: '#ff94b0', content: '', img: '/img/rose_bg.png' },
+    { background: '#c7c455', content: '', img: '/img/pista_bg.png' }
   ];
 
   const [leftMockup, setLeftMockup] = useState(0);
   const leftEachItem = 100 / (items.length - 1);
+  const navigate = useNavigate(); // React Router hook for navigation
 
   const nextItem = () => {
     setActiveIndex((prevIndex) => (prevIndex >= items.length - 1 ? 0 : prevIndex + 1));
@@ -30,17 +32,16 @@ const Main = () => {
     return () => clearInterval(interval);
   }, [activeIndex]);
 
+  const goToHome = () => {
+    navigate('/home'); // Navigate to the home page
+  };
+
   return (
     <div className="App">
       <header>
-        <div>DR2S Industries</div>
+        <div>VELVET&WHISK</div>
         <nav>
-          <ul>
-            <li>HOME</li>
-            <li>CONTACT</li>
-            <li>INFO</li>
-            <li>ABOUT</li>
-          </ul>
+          <button onClick={goToHome} className="home-button">Home</button>
         </nav>
       </header>
 

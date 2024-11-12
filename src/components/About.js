@@ -34,8 +34,9 @@ const About = () => {
         <div className="logo"><img src={logo} alt="Image 2" className="logoimg" />VELVET & WHISK</div>
         <h1 className="main-heading">TASTE THE MAGIC</h1>
         <p className="sub-heading">Experience the enchantment of every drop, where rich flavors and creamy goodness come together in perfect harmony</p>
-        <button className="connect-button">GRAB YOUR BLISS</button>
-      </div>
+        <a href="/home">
+            <button className="connect-button">GRAB YOUR BLISS</button>
+          </a>      </div>
 
       <div className="images-container">
         <img src={milkcan3} alt="Image 1" className="animated-image img1" />

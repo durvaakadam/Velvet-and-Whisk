@@ -113,9 +113,17 @@ const SignUp = () => {
             <FaGoogle className="mr-2 text-xl" /> Continue with Google
           </button>
 
-          <p className="text-center mt-5 text-gray-600 text-sm">
-            Already have an account? <a href="#" onClick={handleLogin} className="text-blue-500 hover:underline">Login</a>
-          </p>
+          <p className="text-center mt-8 text-gray-700 text-lg">
+  Already have an account?
+  <button
+    onClick={handleLogin}
+    className="ml-3 px-5 py-2  text-blue-600 rounded-lg font-bold text-lg  transition duration-300 ease-in-out transform hover:bg-blue-50 hover:scale-105 focus:outline-none "
+  >
+    Login
+  </button>
+</p>
+
+
         </div>
       </div>
     </div>

@@ -104,10 +104,16 @@ const Login = () => {
           >
             <FaGoogle className="mr-2 text-xl" /> Continue with Google
           </button>
+          <p className="text-center mt-8 text-gray-700 text-lg">
+  Don't have an account?
+  <button
+    onClick={handleSignup}
+    className="ml-3 px-5 py-2 text-blue-600 rounded-lg font-bold text-lg transition duration-300 ease-in-out transform hover:bg-blue-50 hover:scale-105 focus:outline-none"
+  >
+    Sign up
+  </button>
+</p>
 
-          <p className="text-center mt-5 text-gray-600 text-sm">
-            Don't have an account? <a href="#" onClick={handleSignup} className="text-blue-500 hover:underline">Sign up</a>
-          </p>
         </div>
       </div>
     </div>

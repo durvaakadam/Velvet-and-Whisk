@@ -65,13 +65,14 @@ const SignUp = () => {
 
       {/* Right side with signup form */}
       <div className="flex flex-col justify-center items-center w-full md:w-1/2 p-8">
-        <button
-          type="button"
-          onClick={handleGoHome}
-          className="absolute top-5 left-5 bg-black text-white rounded-md px-5 py-2 text-lg shadow-md transition duration-300 hover:bg-gray-800"
-        >
-          Back to Home
-        </button>
+      <button
+  type="button"
+  onClick={handleGoHome}
+  className="absolute top-5 left-5 bg-black text-white rounded-md px-5 py-2 text-lg shadow-md transition duration-300 hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg transform"
+>
+  Back to Home
+</button>
+
         <div className="bg-white bg-opacity-80 p-10 rounded-2xl shadow-lg max-w-md mx-auto transition-transform transform hover:scale-105 animate-fadeIn">
         <h2 className="text-2xl text-gray-800 mb-8 text-center">SIGN UP</h2>
 

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import iconCart from '../assets/images/iconCart.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../stores/cart';
-import Cookies from 'js-cookie'; // Ensure you have this installed
-import CookieConsent from './cookie'; // Import the CookieConsent component
+import Cookies from 'js-cookie'; 
+import CookieConsent from './cookie'; 
 
 const ProductCart = (props) => {
     const carts = useSelector(store => store.cart.items);

@@ -72,5 +72,4 @@ const ProductCart = (props) => {
         </div>
     );
 }
-
 export default ProductCart;

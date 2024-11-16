@@ -50,7 +50,6 @@ const Login = () => {
       className="flex justify-center items-center min-h-screen bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgmilk})` }}
     >
-      {/* Left side with cans image */}
       <div className="hidden md:flex w-1/2 h-full">
         <img
           src={cansImage}

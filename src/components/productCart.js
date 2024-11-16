@@ -10,7 +10,7 @@ const ProductCart = (props) => {
     const carts = useSelector(store => store.cart.items);
     const { id, name, price, image, slug } = props.data;
     const dispatch = useDispatch();
-    const [showCookieConsent, setShowCookieConsent] = useState(false);
+    const [showCookieConsent, setShowCookieConsent] = useState(false);     
 
     useEffect(() => {
         const cookieConsent = Cookies.get('cookieConsent');

@@ -12,6 +12,7 @@ const ProductCart = (props) => {
     const dispatch = useDispatch();
     const [showCookieConsent, setShowCookieConsent] = useState(false);
 
+    
     useEffect(() => {
         const cookieConsent = Cookies.get('cookieConsent');
         if (!cookieConsent) {
